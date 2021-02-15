@@ -40,6 +40,10 @@ To complete this challenge, you should implement these following issues:
 }
 
 ```
+
+tcerveira - created resource controller, migration and model
+            -tested via postman
+
 ##### EDD-00002 Create actor CRUD
 
 ```ts
@@ -50,10 +54,81 @@ To complete this challenge, you should implement these following issues:
 }
 ```
 
+tcerveira - created resource controller, migration and model
+           -tested via postman
+
+
 ##### EDD-00003 View Actor's movie appearances
 
 As a user, I want to get a list of movies that a given Actor starred on. 
 _Remember that: An actor could star more than one role in the same movie_
+
+
+tcerveira - created mew endpoint
+     -tested via postman
+
+api/actor/appearances/Yazmin%20Kunde
+
+Result example:
+
+```ts
+[
+    {
+        "id": "fb4f97f7-f43f-49b5-90f4-c7db0dafb385",
+        "name": "Cumque nam officia",
+        "year": "1993",
+        "synopsis": "Nesciunt qui laboriosam nesciunt aut fugiat. Fuga possimus rerum pariatur consequuntur. Nobis distinctio et accusamus assumenda quas. Sed modi itaque reiciendis amet aliquid ea.",
+        "runtime": "227",
+        "released_at": "1987",
+        "cost": "46898",
+        "genre_id": "895f3216-8e1e-3021-bc03-f48f10c47691",
+        "created_at": "2021-02-15T22:32:34.000000Z",
+        "updated_at": "2021-02-15T22:32:34.000000Z",
+        "laravel_through_key": "018aea28-7851-3f43-a411-a5f407f07d72"
+    },
+    {
+        "id": "e145e6b4-f615-49bb-8f7b-859a19978d47",
+        "name": "Libero tempore",
+        "year": "1974",
+        "synopsis": "Cupiditate est libero debitis. Praesentium iste totam officia numquam labore ullam maxime aperiam. Aperiam facere nobis aut odio quia. Dolore reprehenderit explicabo qui porro.",
+        "runtime": "198",
+        "released_at": "2010",
+        "cost": "55079",
+        "genre_id": "895f3216-8e1e-3021-bc03-f48f10c47691",
+        "created_at": "2021-02-15T22:32:34.000000Z",
+        "updated_at": "2021-02-15T22:32:34.000000Z",
+        "laravel_through_key": "018aea28-7851-3f43-a411-a5f407f07d72"
+    },
+    {
+        "id": "d683f2c0-4953-4d24-a74b-3271bd69959a",
+        "name": "Officiis omnis magnam",
+        "year": "2004",
+        "synopsis": "Molestiae aut ea laborum. Enim quasi nisi facere veniam sed consequatur et dolore. Distinctio quae aliquam non aut incidunt. Fuga molestiae quisquam labore.",
+        "runtime": "125",
+        "released_at": "2002",
+        "cost": "104532",
+        "genre_id": "94e092ff-7dc5-3093-9a10-964c8700940e",
+        "created_at": "2021-02-15T22:32:34.000000Z",
+        "updated_at": "2021-02-15T22:32:34.000000Z",
+        "laravel_through_key": "018aea28-7851-3f43-a411-a5f407f07d72"
+    },
+    {
+        "id": "7c64c0c5-10d6-4be5-93a3-bf18cb403d4f",
+        "name": "Distinctio sit",
+        "year": "1998",
+        "synopsis": "Id nesciunt omnis fuga sunt. Quae est qui dolores aliquid ut.",
+        "runtime": "207",
+        "released_at": "1973",
+        "cost": "125187",
+        "genre_id": "895f3216-8e1e-3021-bc03-f48f10c47691",
+        "created_at": "2021-02-15T22:32:34.000000Z",
+        "updated_at": "2021-02-15T22:32:34.000000Z",
+        "laravel_through_key": "018aea28-7851-3f43-a411-a5f407f07d72"
+    }
+]
+
+```
+
 
 ##### EDD-00005 Select one of the following
 
@@ -61,6 +136,29 @@ _Remember that: An actor could star more than one role in the same movie_
 
 As a user, I want to get the favorite genre of a given Actor.
 Business Rule: the favorite genre is the one with the most appearances.
+
+
+tcerveira -  selected this one
+
+new endpoint created
+ -tested via postman
+
+/api/actor/genre/Yazmin%20Kunde
+
+Result example:
+
+```ts
+{
+    "genre": [
+        {
+            "count": "3",
+            "name": "horror"
+        }
+    ],
+    "name": "Yazmin Kunde"
+}
+
+```
    
 2. View Actor's number of Movies in Genres
 

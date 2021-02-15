@@ -21,3 +21,20 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::resources([
     'genres' => GenreController::class,
 ]);
+
+Route::resources([
+    'movies' => MovieController::class,
+]);
+
+Route::resources([
+    'actors' => ActorController::class,
+]);
+
+
+Route::get('/actor/appearances/{name}', 'ActorController@appearances')->name('actor.appearances');
+
+Route::get('/actor/genre/{name}', 'ActorController@favoriteGenre')->name('actor.genre');
+
+
+
+
